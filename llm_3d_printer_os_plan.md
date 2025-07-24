@@ -5,18 +5,18 @@
 - Deploy Prunt3D at maximum physics fidelity across distributed computing
 - Configure comprehensive material database with advanced polymer modeling
 - Implement automated scenario generation leveraging Prunt3D's advanced features
-- Create Qwen3-Coder integration pipeline for processing Prunt3D outputs
+    - Create DeepSeek-R1-Distill-Qwen-1.5B-GGUF integration pipeline for processing Prunt3D outputs
 
 **Training Objectives**:
 - Generate 20M+ physics-accurate scenarios using Prunt3D's advanced simulation
-- Train Qwen3-Coder foundation model on perfect physics understanding
+    - Train DeepSeek-R1-Distill-Qwen-1.5B-GGUF foundation model on perfect physics understanding
 - Achieve 98% success prediction in Prunt3D's high-fidelity environment
 - Establish comprehensive failure mode recognition using Prunt3D's failure modeling
 
 **Deliverables**:
 - Production-scale Prunt3D simulation infrastructure
 - 20M+ Prunt3D simulation sessions with perfect physics ground truth
-- Qwen3-Coder model with deep 3D printing physics understanding
+    - DeepSeek-R1-Distill-Qwen-1.5B-GGUF model with deep 3D printing physics understanding
 - Comprehensive failure mode dataset using Prunt3D's advanced failure modeling
 - Multi-modal synthetic data generation pipeline (visual, audio, sensor)
 
@@ -62,7 +62,7 @@ def prunt_to_real_adaptation():
 **Limited Real-World Validation**:
 - Collect 2,000 carefully controlled real print sessions across diverse printer types
 - Focus on physics validation scenarios to verify Prunt3D accuracy
-- Validate Qwen3-Coder's sim-to-real transfer effectiveness
+    - Validate DeepSeek-R1-Distill-Qwen-1.5B-GGUF's sim-to-real transfer effectiveness
 - Refine safety constraints and emergency response protocols
 
 **Success Metrics**:
@@ -82,9 +82,9 @@ def prunt_to_real_adaptation():
 
 **Advanced Qwen3-Coder Features**:
 ```python
-class AdvancedPrinterLLM(Qwen3CoderBase):
+class AdvancedPrinterLLM(DeepSeekR1DistillQwen15BGGUFBase):
     def natural_language_interaction(self, user_query):
-        """Leverage Qwen3-Coder's conversational abilities"""
+        """Leverage DeepSeek-R1-Distill-Qwen-1.5B-GGUF's conversational abilities"""
         
         if "print is failing" in user_query.lower():
             # Analyze current printer state
@@ -202,7 +202,7 @@ This document outlines a comprehensive plan for building an LLM-controlled 3D pr
 
 ### Core Components (Simulation-First Design)
 - **Prunt3D Simulator**: Primary training environment - advanced physics-based 3D printing simulation
-- **Qwen3-Coder LLM**: Base foundation model for code understanding and generation
+    - **DeepSeek-R1-Distill-Qwen-1.5B-GGUF LLM**: Base foundation model for code understanding and generation
 - **Virtual Klipper Printer**: Secondary simulation for Klipper-specific testing
 - **Klipper Firmware**: Real-time printer control (deployment target)
 - **Sim-to-Real Pipeline**: Domain adaptation and transfer learning infrastructure
@@ -539,13 +539,13 @@ class AdvancedPruntTraining:
         }
 ```
 
-**Qwen3-Coder Integration with Prunt3D**:
+**DeepSeek-R1-Distill-Qwen-1.5B-GGUF Integration with Prunt3D**:
 ```python
-def train_qwen3_on_prunt_data():
-    """Train Qwen3-Coder specifically on Prunt3D simulation data"""
+def train_deepseek_on_prunt_data():
+    """Train DeepSeek-R1-Distill-Qwen-1.5B-GGUF specifically on Prunt3D simulation data"""
     
     for scenario in prunt3d_scenarios:
-        # Qwen3-Coder processes G-code with physics context
+        # DeepSeek-R1-Distill-Qwen-1.5B-GGUF processes G-code with physics context
         prompt = f"""
         # G-Code Analysis with Physics Context
         GCODE: {scenario.gcode}
@@ -561,11 +561,11 @@ def train_qwen3_on_prunt_data():
         """
         
         # Train on Prunt3D's perfect ground truth
-        qwen3_response = qwen3_model.generate(prompt)
+        deepseek_response = deepseek_model.generate(prompt)
         
         # Compare with Prunt3D's physics-accurate results
         loss = physics_informed_loss(
-            qwen3_prediction=qwen3_response,
+            deepseek_prediction=deepseek_response,
             prunt_ground_truth=scenario.physics_results,
             uncertainty_penalty=True
         )
@@ -638,10 +638,10 @@ def progressive_real_world_training():
     model.autonomous_learning(complex_prints, safety_constraints=True)
 ```
 
-### 3. Model Architecture: Qwen3-Coder Foundation with 3D Printing Specialization
+### 3. Model Architecture: DeepSeek-R1-Distill-Qwen-1.5B-GGUF Foundation with 3D Printing Specialization
 
-**Base Model: Qwen3-Coder**
-Qwen3-Coder provides the ideal foundation for our 3D printer OS because:
+**Base Model: DeepSeek-R1-Distill-Qwen-1.5B-GGUF**
+DeepSeek-R1-Distill-Qwen-1.5B-GGUF provides the ideal foundation for our 3D printer OS because:
 
 - **Code Understanding**: Native comprehension of G-code, Klipper configuration, and firmware commands
 - **Structured Reasoning**: Strong logical reasoning for troubleshooting and optimization
@@ -651,10 +651,10 @@ Qwen3-Coder provides the ideal foundation for our 3D printer OS because:
 
 **Specialized Architecture Stack**:
 ```python
-class PrinterLLM(Qwen3CoderBase):
+class PrinterLLM(DeepSeekR1DistillQwen15BGGUFBase):
     def __init__(self):
-        # Base Qwen3-Coder model (pre-trained)
-        super().__init__(model_size="7B")  # or larger based on requirements
+        # Base DeepSeek-R1-Distill-Qwen-1.5B-GGUF model (pre-trained)
+        super().__init__(model_size="1.5B")  # or larger based on requirements
         
         # Specialized encoding layers for 3D printing
         self.gcode_encoder = GCodeTokenizer(vocab_size=2048)
@@ -689,7 +689,7 @@ class PrinterLLM(Qwen3CoderBase):
         # Process Prunt3D simulation data
         prunt_features = self.prunt_fusion(prunt_simulation_data)
         
-        # Combine with Qwen3-Coder's text understanding
+        # Combine with DeepSeek-R1-Distill-Qwen-1.5B-GGUF's text understanding
         gcode_features = self.gcode_encoder(prunt_simulation_data.gcode)
         
         # Fuse all modalities
@@ -713,7 +713,7 @@ class PrinterLLM(Qwen3CoderBase):
         return decision, uncertainty
 ```
 
-**Qwen3-Coder Specialization Benefits**:
+**DeepSeek-R1-Distill-Qwen-1.5B-GGUF Specialization Benefits**:
 
 1. **G-Code Native Understanding**: Pre-trained code comprehension transfers directly to G-code interpretation
 2. **Configuration Management**: Natural handling of Klipper printer.cfg files and parameter relationships  
@@ -723,11 +723,11 @@ class PrinterLLM(Qwen3CoderBase):
 
 **Training Adaptation Strategy**:
 ```python
-def adapt_qwen3_for_printing():
-    """Adapt Qwen3-Coder for 3D printing domain"""
+def adapt_deepseek_for_printing():
+    """Adapt DeepSeek-R1-Distill-Qwen-1.5B-GGUF for 3D printing domain"""
     
     # Phase 1: Domain vocabulary expansion
-    qwen3_model.expand_vocabulary([
+    deepseek_model.expand_vocabulary([
         # G-code commands
         "G0", "G1", "G28", "M104", "M140", "M109", 
         # Klipper-specific
@@ -738,9 +738,9 @@ def adapt_qwen3_for_printing():
     
     # Phase 2: Physics-informed fine-tuning on Prunt3D data
     for batch in prunt3d_training_data:
-        # Leverage Qwen3's structured reasoning
-        physics_explanation = qwen3_model.explain_physics(batch.simulation)
-        decision = qwen3_model.generate_decision(batch.state)
+        # Leverage DeepSeek's structured reasoning
+        physics_explanation = deepseek_model.explain_physics(batch.simulation)
+        decision = deepseek_model.generate_decision(batch.state)
         
         # Train on physics-accurate ground truth
         loss = calculate_physics_informed_loss(
@@ -749,10 +749,10 @@ def adapt_qwen3_for_printing():
             uncertainty=batch.uncertainty_estimate
         )
         
-        qwen3_model.backward(loss)
+        deepseek_model.backward(loss)
     
     # Phase 3: Safety constraint integration
-    qwen3_model.add_safety_layer(KlipperSafetyConstraints())
+    deepseek_model.add_safety_layer(KlipperSafetyConstraints())
     
     return specialized_printer_model
 ```
