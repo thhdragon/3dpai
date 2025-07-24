@@ -1,0 +1,15 @@
+[submodule "resources/prunt3d/prunt"]
+	path = resources/prunt3d/prunt
+	url = https://github.com/thhdragon/prunt.git
+[submodule "resources/prunt3d/prunt_simulator"]
+	path = resources/prunt3d/prunt_simulator
+	url = https://github.com/thhdragon/prunt_simulator.git
+[submodule "resources/prunt3d/usb_serial_firmware_for_prunt_board_3"]
+	path = resources/prunt3d/usb_serial_firmware_for_prunt_board_3
+	url = https://github.com/thhdragon/usb_serial_firmware_for_prunt_board_3.git
+[submodule "resources/prunt3d/prunt_board_3_software"]
+	path = resources/prunt3d/prunt_board_3_software
+	url = https://github.com/thhdragon/prunt_board_3_software.git
+[submodule "resources/klipper"]
+	path = resources/klipper
+	url = https://github.com/thhdragon/klipper.git
