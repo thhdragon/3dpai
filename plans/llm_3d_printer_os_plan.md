@@ -1,3 +1,20 @@
+## Planning Process & Document Map
+
+This project uses a modular planning approach. The following documents in the `plans/` folder provide detailed strategies for each major area:
+
+- **Main Plan (this file):** High-level roadmap, phased milestones, and executive summary.
+- **LLM Training & Fine-Tuning Strategy:** `llm_training_strategy.md` — Detailed plan for LLM training, including Unsloth and smol-course workflows.
+- **Data Engineering & Management Plan:** `data_engineering_plan.md` — Data collection, storage, preprocessing, and privacy.
+- **Evaluation & Benchmarking Plan:** `evaluation_benchmarks_plan.md` — Metrics, test sets, and validation protocols.
+- **Risk Assessment & Mitigation Plan:** `risk_mitigation_plan.md` — Risks, failure modes, and mitigation strategies.
+- **Brainstorming & Open Questions:** `brainstorming_notes.md` — Living document for open questions and research leads.
+
+### LLM Training Resources
+- **Unsloth:** https://docs.unsloth.ai/ — High-efficiency LLM fine-tuning library for large-scale, cost-effective training.
+- **smol-course:** https://github.com/huggingface/smol-course — Educational resource and code for LLM fine-tuning, especially for smaller models and rapid prototyping.
+
+---
+
 ### Phase 1: Prunt3D Simulation Infrastructure & Foundation Training (Months 1-2)
 **Focus**: Build comprehensive Prunt3D-based simulation environment and achieve physics-perfect competency
 
